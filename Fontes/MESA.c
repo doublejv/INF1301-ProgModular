@@ -21,6 +21,7 @@
 #include "MESA.h"
 #include "BARALHO.h"
 #include "LISTA.h"
+#include "CONTA.h"
 
 //jogadores
 #define NINGUEM 0
@@ -59,9 +60,17 @@
 ***************************************************************************/
 LIS_tppLista MES_CriarListaDeListas() {
 
+	#ifdef _DEBUG
+		CNT_CONTAR("Antes de chamar 'LIS_CriarLista'") ;
+	#endif
+	
 	//criando ponteiro pra cabeca da lista mesa
 	LIS_tppLista pCabecaSuperior = LIS_CriarLista (BAR_DestruirBaralho) ;
 
+	#ifdef _DEBUG
+		CNT_CONTAR("Depois de Chamar 'Lis_CriaLista'") ;
+	#endif
+	
 	//assertiva de saída
 	#ifdef _DEBUG
 		assert( pCabecaSuperior != NULL ) ;
