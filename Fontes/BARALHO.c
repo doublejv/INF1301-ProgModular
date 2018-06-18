@@ -55,14 +55,14 @@ BAR_tpCondRet BAR_PreencherVetorCartas (BAR_tppCarta vtCartas[]) {
 	CNT_InicializarContadores(NULL, NULL) ;
 
 	#ifdef _DEBUG
-		CNT_CONTAR("Antes de entrar no for 'Preenchendo o vetor'") ;
+		CNT_CONTAR("BAR_PreencherVetorCartas.Antes de entrar no for 'Preenchendo o vetor'") ;
 	#endif
 
 	//preenchendo o vetor de cartas de forma ordenada
 	for (i = 0; i < TAM; i++, valor++) {
 		
 		#ifdef _DEBUG
-			CNT_CONTAR("Depois de entrar no for 'Preenchendo o vetor'") ;
+			CNT_CONTAR("BAR_PreencherVetorCartas.Depois de entrar no for 'Preenchendo o vetor'") ;
 		#endif
 		
 		//faz a transformacao de int pra tipo especifico
@@ -74,26 +74,26 @@ BAR_tpCondRet BAR_PreencherVetorCartas (BAR_tppCarta vtCartas[]) {
 		vtCartas[i] = pCarta ;
 		
 		#ifdef _DEBUG
-			CNT_CONTAR("Antes de entrar no if 'NULL'") ;
+			CNT_CONTAR("BAR_PreencherVetorCartas.Antes de entrar no if 'NULL'") ;
 		#endif
 
 		if (vtCartas[i] == NULL) {
 
 			#ifdef _DEBUG
-				CNT_CONTAR("Depois de entrar no if 'null'") ;
+				CNT_CONTAR("BAR_PreencherVetorCartas.Depois de entrar no if 'null'") ;
 			#endif
 
 			return BAR_CondRetNaoPreencheuVetor ;
 		}
 		
 		#ifdef _DEBUG
-			CNT_CONTAR("Antes de entrar no if 'i = 9 ou 19 ou 29'") ;
+			CNT_CONTAR("BAR_PreencherVetorCartas.Antes de entrar no if 'i = 9 ou 19 ou 29'") ;
 		#endif
 		
 		if (i == 9 || i == 19 || i == 29) {
 
 			#ifdef _DEBUG
-				CNT_CONTAR("Depois de entrar no if 'i = 9 ou 19 ou 29'") ;
+				CNT_CONTAR("BAR_PreencherVetorCartas.Depois de entrar no if 'i = 9 ou 19 ou 29'") ;
 			#endif
 
 			//reinicia o preenchimento do valor de 0 a 9
@@ -104,13 +104,13 @@ BAR_tpCondRet BAR_PreencherVetorCartas (BAR_tppCarta vtCartas[]) {
 		} //fim if
 
 		#ifdef _DEBUG
-			CNT_CONTAR("Depois de sair do if 'i = 9 ou 19 ou 29'") ;
+			CNT_CONTAR("BAR_PreencherVetorCartas.Depois de sair do if 'i = 9 ou 19 ou 29'") ;
 		#endif
 
 	} //fim for
 
 	#ifdef _DEBUG
-		CNT_CONTAR("Depois de sair do for 'preencher o vetor'") ;
+		CNT_CONTAR("BAR_PreencherVetorCartas.Depois de sair do for 'preencher o vetor'") ;
 	#endif
 
 	return BAR_CondRetOK ;
@@ -127,14 +127,14 @@ BAR_tpCondRet BAR_EmbaralharVetorCartas (BAR_tppCarta vtCartas[]) {
 		naipe = 0 ;
 	
 	#ifdef _DEBUG
-		CNT_CONTAR("Antes de entrar no for 'Preenchendo o vetor'") ;
+		CNT_CONTAR("BAR_EmbaralharVetorCartas.Antes de entrar no for 'Preenchendo o vetor'") ;
 	#endif
 
 	//preenchendo o vetor de cartas de forma ordenada
 	for (i = 0; i < TAM; i++, valor++) {
 		
 		#ifdef _DEBUG
-			CNT_CONTAR("Depois de entrar no for 'Preenchendo o vetor'") ;
+			CNT_CONTAR("BAR_EmbaralharVetorCartas.Depois de entrar no for 'Preenchendo o vetor'") ;
 		#endif
 		
 		//faz a transformacao de int pra tipo especifico
@@ -145,13 +145,13 @@ BAR_tpCondRet BAR_EmbaralharVetorCartas (BAR_tppCarta vtCartas[]) {
 		vtCartas[i] = pCarta;
 		
 		#ifdef _DEBUG
-			CNT_CONTAR("Antes de entrar no if 'i = 9 ou 19 ou 29'") ;
+			CNT_CONTAR("BAR_EmbaralharVetorCartas.Antes de entrar no if 'i = 9 ou 19 ou 29'") ;
 		#endif
 		
 		if (i == 9 || i == 19 || i == 29) {
 			
 			#ifdef _DEBUG
-				CNT_CONTAR("Depois de entrar no if 'i = 9 ou 19 ou 29'") ;
+				CNT_CONTAR("BAR_EmbaralharVetorCartas.Depois de entrar no if 'i = 9 ou 19 ou 29'") ;
 			#endif
 
 			//reinicia o preenchimento do valor de 0 a 9
@@ -163,21 +163,21 @@ BAR_tpCondRet BAR_EmbaralharVetorCartas (BAR_tppCarta vtCartas[]) {
 	} //fim for
 	
 	#ifdef _DEBUG
-		CNT_CONTAR("Depois de sair do for 'Preenchendo o vetor'") ;
+		CNT_CONTAR("BAR_EmbaralharVetorCartas.Depois de sair do for 'Preenchendo o vetor'") ;
 	#endif
 	
 	//função suporte da rand que faz gerar números diferentes sempre
 	srand ((unsigned)time(NULL));
 
 	#ifdef _DEBUG
-		CNT_CONTAR("Antes de entrar no for 'Embaralhando o vetor'") ;
+		CNT_CONTAR("BAR_EmbaralharVetorCartas.Antes de entrar no for 'Embaralhando o vetor'") ;
 	#endif
 	
 	//embaralhando o vetor (troca os indices aleatoriamente)
 	for (i = 0; i < TAM; i++){
 				
 		#ifdef _DEBUG
-			CNT_CONTAR("Depois de entrar no for 'Embaralhando o vetor'") ;
+			CNT_CONTAR("BAR_EmbaralharVetorCartas.Depois de entrar no for 'Embaralhando o vetor'") ;
 		#endif
 		
 		//declara um ponteiro pra um tipo carta
@@ -192,26 +192,26 @@ BAR_tpCondRet BAR_EmbaralharVetorCartas (BAR_tppCarta vtCartas[]) {
 		vtCartas[random] = pCartaAux ;
 		
 		#ifdef _DEBUG
-			CNT_CONTAR("Antes de entrar no if 'NULL'") ;
+			CNT_CONTAR("BAR_EmbaralharVetorCartas.Antes de entrar no if 'NULL'") ;
 		#endif
 
 		if (vtCartas[i] == NULL) {
 			
 			#ifdef _DEBUG
-				CNT_CONTAR("Depois de entrar no if 'NULL'") ;
+				CNT_CONTAR("BAR_EmbaralharVetorCartas.Depois de entrar no if 'NULL'") ;
 			#endif
 			
 			return BAR_CondRetNaoEmbaralhouVetor ;
 		}
 		
 		#ifdef _DEBUG
-			CNT_CONTAR("Não entrou no if 'NULL'") ;
+			CNT_CONTAR("BAR_EmbaralharVetorCartas.Não entrou no if 'NULL'") ;
 		#endif
 		
 	} //fim for
 
 	#ifdef _DEBUG
-		CNT_CONTAR("Depois de sair do for 'Embaralhando o vetor'") ;
+		CNT_CONTAR("BAR_EmbaralharVetorCartas.Depois de sair do for 'Embaralhando o vetor'") ;
 	#endif
 	
 	return BAR_CondRetOK ;
@@ -227,7 +227,7 @@ LIS_tppLista BAR_CriarBaralho() {
 	
 
 	#ifdef _DEBUG
-		CNT_CONTAR("Antes de chamar 'LIS_CriarLista'") ;
+		CNT_CONTAR("BAR_CriarBaralho.Antes de chamar 'LIS_CriarLista'") ;
 	#endif
 	
 	//cria uma lista retornando um ponteiro pra cabeca da lista
@@ -239,7 +239,7 @@ LIS_tppLista BAR_CriarBaralho() {
 	#endif
 	
 	#ifdef _DEBUG
-		CNT_CONTAR("Depois de chamar 'LIS_CriarLista'") ;
+		CNT_CONTAR("BAR_CriarBaralho.Depois de chamar 'LIS_CriarLista'") ;
 	#endif
 
 	return pCabecaBaralho ;
@@ -259,21 +259,21 @@ BAR_tpCondRet BAR_PreencherBaralho(LIS_tppLista pCabecaBaralho, BAR_tppCarta Vet
 	
 
 	#ifdef _DEBUG
-		CNT_CONTAR("Antes de entrar no for 'Preenche usando o vetor embaralhado'") ;
+		CNT_CONTAR("BAR_PreencherBaralho.Antes de entrar no for 'Preenche usando o vetor embaralhado'") ;
 	#endif
 	
 	//preenche um por um usando o vetor embaralhado
 	for (i = 0; i < TAM; i++){
 		
 		#ifdef _DEBUG
-			CNT_CONTAR("Depois de entrar no for 'Preenche usando o vetor embaralhado'") ;
+			CNT_CONTAR("BAR_PreencherBaralho.Depois de entrar no for 'Preenche usando o vetor embaralhado'") ;
 		#endif
 		
 		BAR_tppCarta pCarta;
 		pCarta = VetorAux[i] ;
 	
 		#ifdef _DEBUG
-			CNT_CONTAR("Antes de chamar 'LIS_InserirElementoApos'") ;
+			CNT_CONTAR("BAR_PreencherBaralho.Antes de chamar 'LIS_InserirElementoApos'") ;
 		#endif
 		
 		//é inserido um elemento na lista Baralho e 
@@ -281,14 +281,14 @@ BAR_tpCondRet BAR_PreencherBaralho(LIS_tppLista pCabecaBaralho, BAR_tppCarta Vet
 		condRetLista = LIS_InserirElementoApos (pCabecaBaralho, pCarta) ;
 
 		#ifdef _DEBUG
-			CNT_CONTAR("Depois de chamar 'Lis_InserirElementoApois e antes de entrar no if 'Assertiva de saída'") ;
+			CNT_CONTAR("BAR_PreencherBaralho.Depois de chamar 'Lis_InserirElementoApois e antes de entrar no if 'Assertiva de saída'") ;
 		#endif
 		
 		//assertiva de saída
 		if (condRetLista != LIS_CondRetOK){
 			
 			#ifdef _DEBUG
-				CNT_CONTAR("Depois de entrar no if 'Assertiva de saída'") ;
+				CNT_CONTAR("BAR_PreencherBaralho.Depois de entrar no if 'Assertiva de saída'") ;
 			#endif
 			
 			printf("\nNão inseriu carta no baralho.");
@@ -296,28 +296,28 @@ BAR_tpCondRet BAR_PreencherBaralho(LIS_tppLista pCabecaBaralho, BAR_tppCarta Vet
 		}//fim if
 
 		#ifdef _DEBUG
-			CNT_CONTAR("Não entrou no if 'Assertiva de saída'") ;
+			CNT_CONTAR("BAR_PreencherBaralho.Não entrou no if 'Assertiva de saída'") ;
 		#endif
 		
 	}//fim for
 
 
 	#ifdef _DEBUG
-		CNT_CONTAR("Depois de sair do for 'Preenche usando o vetor embaralhado' e antes de chamar 'LIS_IrInicioLista'") ;
+		CNT_CONTAR("BAR_PreencherBaralho.Depois de sair do for 'Preenche usando o vetor embaralhado' e antes de chamar 'LIS_IrInicioLista'") ;
 	#endif
 	
 	//elemento corrente passa a ser o primeiro
 	LIS_IrInicioLista(pCabecaBaralho) ;
 	
 	#ifdef _DEBUG
-		CNT_CONTAR("Depois de chamar 'LIS_IrInicioLista' e antes de entrar no segundo if 'Assertiva de saída'") ;
+		CNT_CONTAR("BAR_PreencherBaralho.Depois de chamar 'LIS_IrInicioLista' e antes de entrar no segundo if 'Assertiva de saída'") ;
 	#endif
 
 	//assertivas de saída
 	if (LIS_ObterQtdElem(pCabecaBaralho) < 40) {
 		
 		#ifdef _DEBUG
-			CNT_CONTAR("Depois de entrar no segundo if 'Assertiva de saída'") ;
+			CNT_CONTAR("BAR_PreencherBaralho.Depois de entrar no segundo if 'Assertiva de saída'") ;
 		#endif
 		
 		return BAR_CondRetNaoPreencheuBaralho ;
@@ -331,7 +331,7 @@ BAR_tpCondRet BAR_PreencherBaralho(LIS_tppLista pCabecaBaralho, BAR_tppCarta Vet
 	else {
 		
 		#ifdef _DEBUG
-			CNT_CONTAR("Entrou no else") ;
+			CNT_CONTAR("BAR_PreencherBaralho.Entrou no else") ;
 		#endif
 		
 		return BAR_CondRetOK ;
@@ -345,14 +345,14 @@ BAR_tpCondRet BAR_PreencherBaralho(LIS_tppLista pCabecaBaralho, BAR_tppCarta Vet
 BAR_tppCarta BAR_CriarCarta (BAR_tpValorCarta valor, BAR_tpNaipeCarta naipe) {
 
 	#ifdef _DEBUG
-		CNT_CONTAR("Antes de alocar o espaço para carta") ;
+		CNT_CONTAR("BAR_CriarCarta.Antes de alocar o espaço para carta") ;
 	#endif
 	
 	//declara um ponteiro pra um tipo carta e aloca memoria
 	BAR_tppCarta pCarta = (BAR_tppCarta) malloc(sizeof(BAR_tpCarta)) ;
 	
 	#ifdef _DEBUG
-		CNT_CONTAR("Antes de atribuir o valor e o naipe") ;
+		CNT_CONTAR("BAR_CriarCarta.Antes de atribuir o valor e o naipe") ;
 	#endif
 	
 	//atribui valor e naipe a um tipo carta
@@ -360,7 +360,7 @@ BAR_tppCarta BAR_CriarCarta (BAR_tpValorCarta valor, BAR_tpNaipeCarta naipe) {
 	pCarta->naipe = naipe ;
 	
 	#ifdef _DEBUG
-		CNT_CONTAR("Depois de atribuir o valor e o naipe") ;
+		CNT_CONTAR("BAR_CriarCarta.Depois de atribuir o valor e o naipe") ;
 	#endif
 	
 	//retorna um ponteiro pra um tipo carta
@@ -376,20 +376,20 @@ void BAR_DestruirCarta(void * pCarta) {
 	BAR_tppCarta pCartaAux = (BAR_tppCarta) pCarta;
 	
 	#ifdef _DEBUG
-		CNT_CONTAR("Antes de entrar no if 'NULL'") ;
+		CNT_CONTAR("BAR_DestruirCarta.Antes de entrar no if 'NULL'") ;
 	#endif
 	
 	if (pCarta == NULL) {
 
 		#ifdef _DEBUG
-			CNT_CONTAR("Depois de entrar no if 'NULL'") ;
+			CNT_CONTAR("BAR_DestruirCarta.Depois de entrar no if 'NULL'") ;
 		#endif
 		
 		return;
 	}
 
 	#ifdef _DEBUG
-		CNT_CONTAR("Não entrou no if 'NULL'") ;
+		CNT_CONTAR("BAR_DestruirCarta.Não entrou no if 'NULL'") ;
 	#endif
 	
 	free(pCartaAux);
@@ -408,13 +408,13 @@ void BAR_DestruirBaralho(void * pLista) {
 	#endif
 
 	#ifdef _DEBUG
-		CNT_CONTAR("Antes de chamar 'LIS_ExcluirElemento'") ;
+		CNT_CONTAR("BAR_DestruirBaralho.Antes de chamar 'LIS_ExcluirElemento'") ;
 	#endif
 	
 	condRetLista = LIS_ExcluirElemento(pLista) ;
 	
 	#ifdef _DEBUG
-		CNT_CONTAR("Depois de chamar 'LIS_ExcluirElemento'") ;
+		CNT_CONTAR("BAR_DestruirBaralho.Depois de chamar 'LIS_ExcluirElemento'") ;
 	#endif
 	
 } /************ Fim função: BAR &Destruir baralho ****************************/
@@ -425,14 +425,14 @@ void BAR_DestruirBaralho(void * pLista) {
 BAR_tppCarta BAR_ObterCartaCorr(LIS_tppLista pCabecaLista) {
 
 	#ifdef _DEBUG
-		CNT_CONTAR("Antes de chamar 'LIS_ObterValor'") ;
+		CNT_CONTAR("BAR_ObterCartaCorr.Antes de chamar 'LIS_ObterValor'") ;
 	#endif
 	
 	//obtem o valor corrente de uma lista e retorna
 	BAR_tppCarta pCarta = (BAR_tppCarta)LIS_ObterValor (pCabecaLista) ;
 	
 	#ifdef _DEBUG
-		CNT_CONTAR("Depois de chamar 'LIS_ObterValor'") ;
+		CNT_CONTAR("BAR_ObterCartaCorr.Depois de chamar 'LIS_ObterValor'") ;
 	#endif
 	
 	//assertiva de saída
@@ -475,67 +475,67 @@ BAR_tpCondRet BAR_TransferirCarta(LIS_tppLista pOrigem, LIS_tppLista pDestino) {
 	LIS_tpCondRet CondRetLista ;
 	
 	#ifdef _DEBUG
-		CNT_CONTAR("Antes de chamar 'BAR_ObterCartaCorr'") ;
+		CNT_CONTAR("BAR_TransferirCarta.Antes de chamar 'BAR_ObterCartaCorr'") ;
 	#endif
 	
 	BAR_tppCarta pCarta = BAR_ObterCartaCorr(pOrigem) ;
 	
 	#ifdef _DEBUG
-		CNT_CONTAR("Depois de chamar 'BAR_ObterCartaCorr' e antes de entrar no if 'NULL'") ;
+		CNT_CONTAR("BAR_TransferirCarta.Depois de chamar 'BAR_ObterCartaCorr' e antes de entrar no if 'NULL'") ;
 	#endif
 	
 	//assertiva de saida
 	if (pCarta == NULL) { 
 		
 	#ifdef _DEBUG
-		CNT_CONTAR("Depois de entrar no if 'NULL'") ;
+		CNT_CONTAR("BAR_TransferirCarta.Depois de entrar no if 'NULL'") ;
 	#endif
 		
 		return BAR_CondRetNaoObteveCarta ;
 	}
 
 	#ifdef _DEBUG
-		CNT_CONTAR("Antes de chamar 'LIS_InserirElementoApos'") ;
+		CNT_CONTAR("BAR_TransferirCarta.Antes de chamar 'LIS_InserirElementoApos'") ;
 	#endif
 	
 	CondRetLista = LIS_InserirElementoApos(pDestino, pCarta) ;
 
 	#ifdef _DEBUG
-		CNT_CONTAR("Depois de chamar 'LIS_InserirElementoApos' e antes de entrar no if 'Assertiva de saída'") ;
+		CNT_CONTAR("BAR_TransferirCarta.Depois de chamar 'LIS_InserirElementoApos' e antes de entrar no if 'Assertiva de saída'") ;
 	#endif
 	
 	//assertiva de saida
 	if (CondRetLista == LIS_CondRetFaltouMemoria) {
 		
 	#ifdef _DEBUG
-		CNT_CONTAR("Depois de entrar no if 'Assertiva de saída'") ;
+		CNT_CONTAR("BAR_TransferirCarta.Depois de entrar no if 'Assertiva de saída'") ;
 	#endif
 		
 		return BAR_CondRetNaoInseriuCarta ;
 	}
 
 	#ifdef _DEBUG
-		CNT_CONTAR("Antes de chamar 'LIS_ExcluirPtrParaElemento'") ;
+		CNT_CONTAR("BAR_TransferirCarta.Antes de chamar 'LIS_ExcluirPtrParaElemento'") ;
 	#endif
 	
 	CondRetLista = LIS_ExcluirPtrParaElemento(pOrigem) ;
 	
 	#ifdef _DEBUG
-		CNT_CONTAR("Depois de chamar 'LIS_ExcluirPtrParaElemento' e antes de entrar no segundo if 'Assertiva de saída") ;
+		CNT_CONTAR("BAR_TransferirCarta.Depois de chamar 'LIS_ExcluirPtrParaElemento' e antes de entrar no segundo if 'Assertiva de saída") ;
 	#endif
 
 	//assertiva de saida
 	if (CondRetLista == LIS_CondRetListaVazia) {
 		
 	#ifdef _DEBUG
-		CNT_CONTAR("Depois de entrar no segundo if 'Assertiva de saída'") ;
+		CNT_CONTAR("BAR_TransferirCarta.Depois de entrar no segundo if 'Assertiva de saída'") ;
 	#endif
 		
 		return BAR_CondRetNaoExcluiuPtrParaElem ;
 	}
 	
 	#ifdef _DEBUG
-		CNT_CONTAR("Não entrou no segundo if 'Assertiva de saída'") ;
+		CNT_CONTAR("BAR_TransferirCarta.Não entrou no segundo if 'Assertiva de saída'") ;
 	#endif
 
 	return BAR_CondRetOK ;
@@ -551,49 +551,49 @@ BAR_tpCondRet BAR_VerificarSeEhManilha(BAR_tppCarta pAposta, BAR_tppCarta pVira)
 	BAR_tpValorCarta valorEspVira, valorEspAposta, valorEspManilha;
 
 	#ifdef _DEBUG
-		CNT_CONTAR("Antes de chamar 'BAR_ObterValor' para aposta") ;
+		CNT_CONTAR("BAR_VerificarSeEhManilha.Antes de chamar 'BAR_ObterValor' para aposta") ;
 	#endif
 	
 	//obtem o valor tpValorCarta da carta que acabou de ser apostada e da vira
 	valorEspAposta = BAR_ObterValor(pAposta) ;
 	#ifdef _DEBUG
-		CNT_CONTAR("Depois de chamar 'BAR_ObterValor para aposta e antes de chamar para vira'") ;
+		CNT_CONTAR("BAR_VerificarSeEhManilha.Depois de chamar 'BAR_ObterValor para aposta e antes de chamar para vira'") ;
 	#endif
 	valorEspVira = BAR_ObterValor(pVira) ;
 	
 	#ifdef _DEBUG
-		CNT_CONTAR("Depois de chamar 'Bar_ObterValor'para vira e antes de entrar no for 'vira = 9'") ;
+		CNT_CONTAR("BAR_VerificarSeEhManilha.Depois de chamar 'Bar_ObterValor'para vira e antes de entrar no for 'vira = 9'") ;
 	#endif
 
 	if ((int)valorEspVira == 9) {
 		
 		#ifdef _DEBUG
-			CNT_CONTAR("Depois de entrar no if 'vira = 9'") ;
+			CNT_CONTAR("BAR_VerificarSeEhManilha.Depois de entrar no if 'vira = 9'") ;
 		#endif
 
 		(int)valorEspManilha = 0 ;
 		
 		#ifdef _DEBUG
-			CNT_CONTAR("Antes de entrar no if 'Aposta = Manilha'") ;
+			CNT_CONTAR("BAR_VerificarSeEhManilha.Antes de entrar no if 'Aposta = Manilha'") ;
 		#endif
 
 		if (valorEspAposta == valorEspManilha) {
 			
 			#ifdef _DEBUG
-				CNT_CONTAR("Depois de entrar no if 'Aposta = Manilha'") ;
+				CNT_CONTAR("BAR_VerificarSeEhManilha.Depois de entrar no if 'Aposta = Manilha'") ;
 			#endif
 			
 			return BAR_CondRetEhManilha ;
 		} //fim if
 		
 		#ifdef _DEBUG
-			CNT_CONTAR("Antes de entrar no else do 'Aposta = manilha'") ;
+			CNT_CONTAR("BAR_VerificarSeEhManilha.Antes de entrar no else do 'Aposta = manilha'") ;
 		#endif
 		
 		else {
 			
 			#ifdef _DEBUG
-				CNT_CONTAR("Depois de entrar no else do 'Aposta = manilha'") ;
+				CNT_CONTAR("BAR_VerificarSeEhManilha.Depois de entrar no else do 'Aposta = manilha'") ;
 			#endif
 			
 			return BAR_CondRetNaoEhManilha ;
@@ -602,38 +602,38 @@ BAR_tpCondRet BAR_VerificarSeEhManilha(BAR_tppCarta pAposta, BAR_tppCarta pVira)
 	} //fim if
 
 	#ifdef _DEBUG
-		CNT_CONTAR("Antes de entrar no else do 'Vira = 9'") ;
+		CNT_CONTAR("BAR_VerificarSeEhManilha.Antes de entrar no else do 'Vira = 9'") ;
 	#endif
 	
 	else {
 		
 		#ifdef _DEBUG
-			CNT_CONTAR("Depois de entrar no else do 'Vira = 9'") ;
+			CNT_CONTAR("BAR_VerificarSeEhManilha.Depois de entrar no else do 'Vira = 9'") ;
 		#endif
 
 		(int)valorEspManilha = ((int)valorEspVira) + 1 ;
 
 		#ifdef _DEBUG
-			CNT_CONTAR("Antes de entrar no segundo if 'Aposta = Manilha'") ;
+			CNT_CONTAR("BAR_VerificarSeEhManilha.Antes de entrar no segundo if 'Aposta = Manilha'") ;
 		#endif
 		
 		if (valorEspAposta == valorEspManilha) {
 			
 			#ifdef _DEBUG
-				CNT_CONTAR("Depois de entrar no segundo if 'Aposta = Manilha'") ;
+				CNT_CONTAR("BAR_VerificarSeEhManilha.Depois de entrar no segundo if 'Aposta = Manilha'") ;
 			#endif
 			
 			return BAR_CondRetEhManilha ;
 		} //fim if
 		
 		#ifdef _DEBUG
-			CNT_CONTAR("Antes de entrar no else do segundo if 'Aposta = Manilha'") ;
+			CNT_CONTAR("BAR_VerificarSeEhManilha.Antes de entrar no else do segundo if 'Aposta = Manilha'") ;
 		#endif
 		
 		else {
 			
 			#ifdef _DEBUG
-				CNT_CONTAR("Depois de entrar no else do segundo if 'Aposta = Manilha'") ;
+				CNT_CONTAR("BAR_VerificarSeEhManilha.Depois de entrar no else do segundo if 'Aposta = Manilha'") ;
 			#endif
 			
 			return BAR_CondRetNaoEhManilha ;
