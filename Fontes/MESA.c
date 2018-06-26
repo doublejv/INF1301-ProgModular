@@ -25,6 +25,7 @@
 
 #ifdef _DEBUG
    #include "Generico.h"
+   #include "CEspDin.h"
    #include "Conta.h"
    #include "..\\tabelas\\IdTiposEspaco.def"
 #endif
@@ -81,6 +82,10 @@ LIS_tppLista MES_CriarListaDeListas() {
 		CNT_CONTAR("MES_CriarListaDeListas - Depois de atribuir valor NaoNULL e antes de sair") ;
 	#endif
 
+	#ifdef _DEBUG
+		CED_DefinirTipoEspaco(pCabecaSuperior, MES_TipoEspacoCabecaSuperior) ;
+	#endif
+	
 	return pCabecaSuperior ;
 
 } /***************** Fim função: MES &Criar lista de listas *****************/
@@ -103,6 +108,10 @@ LIS_tppLista MES_CriarMesa() {
 	#ifdef _DEBUG
 		assert( pCabecaMesa != NULL ) ;
 		CNT_CONTAR("MES_CriarMesa - Depois de atribuir valor NaoNULL e antes de sair") ;
+	#endif
+	
+	#ifdef _DEBUG
+		CED_DefinirTipoEspaco(pCabecaMesa, MES_TipoEspacoMesa) ;
 	#endif
 
 	return pCabecaMesa ;
@@ -128,6 +137,10 @@ LIS_tppLista MES_CriarMao() {
 		assert( pCabecaMao != NULL ) ;
 		CNT_CONTAR("MES_CriarMao - Depois de atribuir valor NaoNULL e antes de sair") ;
 	#endif
+	
+	#ifdef _DEBUG
+		CED_DefinirTipoEspaco(pCabecaMao, MES_TipoEspacoMao) ;
+	#endif
 
 	return pCabecaMao ;
 
@@ -151,6 +164,10 @@ LIS_tppLista MES_CriarLixo() {
 	#ifdef _DEBUG
 		assert( pCabecaLixo != NULL ) ;
 		CNT_CONTAR("MES_CriarLixo - Depois de atribuir valor NaoNULL e antes de sair") ;
+	#endif
+	
+	#ifdef _DEBUG
+		CED_DefinirTipoEspaco(pCabecaLixo, MES_TipoEspacoLixo) ;
 	#endif
 
 	return pCabecaLixo ;
