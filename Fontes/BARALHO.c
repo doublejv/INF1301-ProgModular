@@ -433,6 +433,95 @@ BAR_tpCondRet BAR_VerificarSeEhManilha(BAR_tppCarta pAposta, BAR_tppCarta pVira)
 }
 
 /***********  CÓDIGO DAS FUNÇÕES ENCAPSULADAS NO MÓDULO  *******************/
-//nao ha funcoes encapsuladas no modulo
+
+/***************************************************************************
+*  $FC Função: BAR  -Verificar baralho
+***************************************************************************/
+/* Incompleto (esperando confirmação do gugu)
+#ifdef _DEBUG
+BAR_tpCondRet BAR_VerificarBaralho( void * pCabecaBaralhoParm ) {
+
+  LIS_tppLista * pCabecaBaralho = NULL ;
+
+  	// Verifica o tipo do espaço
+	if ( pCabecaBaralhoParm == NULL ) {
+		TST_NotificarFalha( "Tentou verificar cabeça inexistente." ) ;
+		return BAR_CondRetErroEstrutura ;
+	}
+
+	if ( ! CED_VerificarEspaco( pCabecaBaralhoParm , NULL )) {
+		TST_NotificarFalha( "Controle do espaço acusou erro." ) ;
+		return BAR_CondRetErroEstrutura ;
+	}
+
+	if (TST_CompararInt(BAR_TipoEspacoBaralho, CED_ObterTipoEspaco(pCabecaBaralhoParm),
+		"Tipo do espaço de dados não é cabeça de árvore.") != TST_CondRetOK) {
+		return BAR_CondRetErroEstrutura ;
+	}
+
+	pCabecaBaralho = ( LIS_tppLista * )( pCabecaBaralhoParm ) ;
+
+  	// Verifica raiz da árvore
+	if ( pArvore->pNoRaiz != NULL ) {
+		if (TST_CompararPonteiro(pCabecaParm, pArvore->pNoRaiz->pCabeca,
+	     	"Nó raiz não aponta para cabeça.") != TST_CondRetOK) {
+	   		return LIS_CondRetErroEstrutura ;
+		}
+	} 
+	else {
+		if ( TST_CompararPonteiro( NULL , pArvore->pNoCorr ,
+		     "Árvore vazia tem nó corrente não NULL." ) != TST_CondRetOK ) {
+	   		return LIS_CondRetErroEstrutura ;
+		}
+	}
+
+  	// Verifica corrente
+     if ( pArvore->pNoCorr != NULL ) {
+        if ( TST_CompararPonteiro( pCabecaParm , pArvore->pNoCorr->pCabeca ,
+             "Nó corrente não aponta para cabeça." ) != TST_CondRetOK ) {
+           return LIS_CondRetErroEstrutura ;
+        }
+     } else {
+        if ( TST_CompararPonteiro( NULL , pArvore->pNoRaiz ,
+             "Árvore não vazia tem nó corrente NULL." ) != TST_CondRetOK ) {
+           return LIS_CondRetErroEstrutura ;
+        }
+     }
+
+  return LIS_CondRetOK ;
+
+} /**************** Fim função: BAR -Verificar baralho ***********************/
+/*
+#endif
+*/
+
+/***************************************************************************
+*  $FC Função: BAR  -Verificar carta
+***************************************************************************/
+#ifdef _DEBUG
+BAR_tpCondRet BAR_VerificarCarta( void * pCartaParm ) {
+	//BAR_tppCarta pCarta = NULL;
+	
+	// Verificar o tipo de espaço
+	if ( pCartaParm == NULL ) {
+		TST_NotificarFalha ( "Tentou verificar carta inexistente." ) ;
+		return BAR_CondRetErroEstrutura ;
+	}
+	
+	if ( ! CED_VerificarEspaco( pCartaParm , NULL )) {
+		TST_NotificarFalha( "Controle do espaço acusou erro." ) ;
+		return BAR_CondRetErroEstrutura ;
+	}
+	
+	if ( TST_CompararInt( BAR_TipoEspacoCarta , CED_ObterTipoEspaco( pCartaParm ) , 
+		"Tipo do espaço de dados não é carta." ) != TST_CondRetOK ) {
+		return BAR_CondRetErroEstrutura ;
+	}
+	
+	//pCarta = (BAR_tppCarta) (pCartaParm) ;
+	
+	return BAR_CondRetOK ;
+}
+#endif
 
 /************ FIM DO MÓDULO DE IMPLEMENTAÇÃO: BAR Baralho ******************/
