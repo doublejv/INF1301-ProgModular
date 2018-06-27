@@ -51,7 +51,8 @@ typedef enum {
    BAR_CondRetNaoExcluiuPtrParaElem,
    BAR_CondRetEhManilha,
    BAR_CondRetNaoEhManilha,
-   BAR_CondRetNaoPreencheuBaralho
+   BAR_CondRetNaoPreencheuBaralho,
+   BAR_CondRetErroEstrutura
 } BAR_tpCondRet;
 
 
