@@ -51,7 +51,8 @@ typedef enum {
    BAR_CondRetNaoExcluiuPtrParaElem,
    BAR_CondRetEhManilha,
    BAR_CondRetNaoEhManilha,
-   BAR_CondRetNaoPreencheuBaralho
+   BAR_CondRetNaoPreencheuBaralho,
+   BAR_CondRetErroEstrutura
 } BAR_tpCondRet;
 
 
@@ -233,6 +234,14 @@ BAR_tpCondRet BAR_TransferirCarta(LIS_tppLista pOrigem, LIS_tppLista pDestino) ;
 ***************************************************************************/
 BAR_tpCondRet BAR_VerificarSeEhManilha(BAR_tppCarta pAposta, BAR_tppCarta pVira) ;
 
+/***********************************************************************
+*  $FC Função: LIS  &Verificar cabeca
+*
+*  $ED Descrição da função
+***********************************************************************/
+#ifdef _DEBUG
+BAR_tpCondRet BAR_VerificarCarta( void * pCartaParm ) ;
+#endif
 
 
 #undef BARALHO_EXT
