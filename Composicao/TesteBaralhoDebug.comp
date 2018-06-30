@@ -11,7 +11,7 @@ h           =  ..\Fontes
 def         =  ..\Tabelas
 
 [Modulos]
-Lista
+Lista	
 Baralho     /D_DEBUG
 TestBAR     /D_DEBUG
 
