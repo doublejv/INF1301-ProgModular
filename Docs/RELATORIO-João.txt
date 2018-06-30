@@ -1,3 +1,5 @@
+T2:
+
 04/04/2018 - 1h trabalhada - Estudar
 Estudamos os requisitos funcionais e não funcionais de um jogo de truco.
 
@@ -43,3 +45,31 @@ Foi escrito o script de teste do módulo baralho.
 
 07/05/2018 - 3h trabalhadas - Realizar os testes / Revisar Script de Teste
 Foram realizados os testes do módulo baralho  e o script de teste do módulo lista foi revisado com mais casos de teste.
+
+T4:
+
+11/05/2018 - 0h trabalhadas - Inicio do trabalho 
+
+21/05/2018 - 3h trabalhas - Estudar o Código
+Estudei o módulo Baralho
+
+22/05/2018 - 4h trabalhadas - Estudar o Código
+Estudei o módulo Mesa
+
+22/06/2018 - 2h trabalhadas - Estudar Módulo
+Estudei o módulo contador e os possíveis lugares para se botar os contadores no código
+
+24/06/2018 - 4h trabalhadas - Modificar Módulo
+Botei contadores nas arestas do módulo Baralho
+
+26/06/2018 - 4h trabalhadas - Modificar Módulo
+Botei contadores nas arestas do módulo Mesa
+
+27/06/2018 - 2h trabalhadas - Revisar Código do Módulo / Redigir Script de Teste
+Foram feitas mudanças nos contadores de Baralho e redigido os arquivos .count e adicionadas funções de contadores no script de teste
+
+28/06/2018 - 3h trabalhadas - Estudar Módulo / Revisar Módulo
+Estudei o módulo CEspDin e redigi uma função de verificação estrutural para o módulo baralho.
+
+29/05 - 4h trabalhadas - Redigir Testes / Toques Finais
+Redigi testes manuais de caixa preta no programa para checar as funções de mão de onze e mão de ferro, toques finais foram feitos na documentação do projeto.
